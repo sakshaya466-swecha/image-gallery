@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h2>My Gallery</h2>
+
+    <button onclick="toggleDarkMode()" class="dark-btn">
+      Dark Mode
+    </button>
+  </nav>
+
+  <!-- Search -->
+  <input type="text" id="search" placeholder="Search images..." onkeyup="searchImages()">
+
+  <!-- Category Buttons -->
+  <div class="buttons">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('travel')">Travel</button>
+    <button onclick="filterImages('nature')">Nature</button>
+  </div>
+
+  <!-- Gallery -->
+  <div class="gallery">
+
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+    class="travel" onclick="openImage(this)">
+
+    <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d"
+    class="travel" onclick="openImage(this)">
+
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+    class="nature" onclick="openImage(this)">
+
+    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e"
+    class="nature" onclick="openImage(this)">
+
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeImage()">&times;</span>
+    <img id="lightbox-img">
+  </div>
+
+  <!-- Footer -->
+  
+
+  <script src="script.js"></script>
+
+</body>
+</html>
